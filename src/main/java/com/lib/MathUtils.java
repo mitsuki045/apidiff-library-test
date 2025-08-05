@@ -6,9 +6,15 @@ public class MathUtils {
         return a + b;
     }
 
-    // BC: subtract メソッド 削除 (ここには存在しない)
+    public int subtract(int a, int b) {
+        return a - b;
+    }
 
-    public double divide(double a, double b) {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         return a / b;
     }
@@ -22,9 +28,7 @@ public class MathUtils {
         return result;
     }
 
-    // BC: メソッド名変更 + 無意味な文追加
-    public boolean checkPrime(int n) {
-        int a = 1 + 1;  // 意味ない文
+    public boolean isPrime(int n) {
         if (n <= 1) return false;
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) return false;
@@ -41,18 +45,12 @@ public class MathUtils {
         return a * (b / gcd(a, b));
     }
 
-    // Non-BC: 新規メソッド追加
-    public int modulo(int a, int b) {
-        return a % b;
-    }
-
-    // Non-BC: アクセス修飾子をprotectedからpublicに変更
+    // 追加メソッド（BCとNon-BCの変更候補として）
     public int square(int x) {
         return x * x;
     }
 
-    // Non-BC: final修飾子を追加
-    public final int cube(int x) {
+    public int cube(int x) {
         return x * x * x;
     }
 
