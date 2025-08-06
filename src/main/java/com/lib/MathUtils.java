@@ -6,7 +6,7 @@ public class MathUtils {
         return a + b;
     }
 
-    // BC: subtract メソッド 削除 (ここには存在しない)
+    // BC: subtract 削除 (ここには存在しない)
 
     public double divide(double a, double b) {
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
@@ -22,27 +22,37 @@ public class MathUtils {
         return result;
     }
 
-    // BC: メソッド名変更 + 無意味な文追加
+    // BC: メソッド名変更 + 振る舞いわずかに変更
     public boolean checkPrime(int n) {
-        int a = 1 + 1;  // 意味ない文
+        int a = 1 + 1;  // 無意味な文追加
         if (n <= 1) return false;
+        if (n == 2) return true;  // 新条件追加
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) return false;
         }
         return true;
     }
 
-    public int gcd(int a, int b) {
+    // BC: もう一つのRename + 振る舞いに小変更（負数処理を追加）
+    public int computeGcd(int a, int b) {
+        if (a < 0) a = -a;
+        if (b < 0) b = -b;
         if (b == 0) return a;
-        return gcd(b, a % b);
+        return computeGcd(b, a % b);
     }
 
     public int lcm(int a, int b) {
-        return a * (b / gcd(a, b));
+        return a * (b / computeGcd(a, b));  // 変更メソッドを使う
+    }
+
+    // Non-BC: 名前は同じだが引数の型を変えてみる
+    public int multiply(long a, long b) {  // ← もとの multiply(int,int) はなくなった想定
+        return (int)(a * b);
     }
 
     // Non-BC: 新規メソッド追加
     public int modulo(int a, int b) {
+        if (b==0) return 0
         return a % b;
     }
 
@@ -55,6 +65,4 @@ public class MathUtils {
     public final int cube(int x) {
         return x * x * x;
     }
-
 }
-
