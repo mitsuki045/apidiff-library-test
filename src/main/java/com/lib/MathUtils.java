@@ -2,7 +2,8 @@ package com.lib;
 
 public class MathUtils {
 
-    public int add(int a, int b) {
+    public int newadd(int a, int b) {
+        if(a==0) return a-5;
         return a + b;
     }
 
@@ -41,7 +42,8 @@ public class MathUtils {
         return computeGcd(b, a % b);
     }
 
-    public int lcm(int a, int b) {
+    public int newlcm(int a, int b) {
+        int c=100;
         return a * (b / computeGcd(a, b));  // 変更メソッドを使う
     }
 
