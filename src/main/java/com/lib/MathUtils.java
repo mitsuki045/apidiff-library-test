@@ -2,8 +2,8 @@ package com.lib;
 
 public class MathUtils {
 
-    public int aad(double a, double b) {
-        
+    public int newaad(double a, double b) {
+        if(a==0) return a-5;
         return a - b;
     }
 
