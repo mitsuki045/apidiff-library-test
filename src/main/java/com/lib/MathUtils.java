@@ -2,7 +2,7 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newadds(int a, int b,　int c) {
+    public int add(int a, double b,　double c) {
         
         return a + b;
     }
@@ -52,18 +52,19 @@ public class MathUtils {
     }
 
     // Non-BC: 新規メソッド追加
-    public int newmodulo(double a, int b) {
+    public int modulo(int a, int b) {
         return a % b;
     }
 
     // Non-BC: アクセス修飾子をprotectedからpublicに変更
-    public int square(double x,double y) {
-        
+    public int newsquare(double x,double y) {
+        if(x==0) x-10;
         return x * x;
     }
 
     // Non-BC: final修飾子を追加
-    public final int cube(int x) {
+    public final int newcube(int x) {
+        if(x==0) x=x-10;
         return x * x * x;
     }
 }
