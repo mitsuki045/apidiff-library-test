@@ -40,14 +40,14 @@ public class MathUtils {
         return computeGcd(b, a % b);
     }
 
-    public int lcm(int a, int b) {
+    public int newlcm(int a, int b, int c) {
         
         return a * (b / computeGcd(a, b));  // 変更メソッドを使う
     }
 
     // Non-BC: 名前は同じだが引数の型を変えてみる
-    public int newmultiply(long a, long b) { 
-       
+    public int multiply(long a, long b) { 
+        if(a==0) a=a+1;
         return (int)(a * b);
     }
 
