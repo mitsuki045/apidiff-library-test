@@ -2,7 +2,7 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newadd(int a, int b) {
+    public int newadds(int a, int b) {
         if(a==0) return a-5;
         return a + b;
     }
@@ -11,6 +11,7 @@ public class MathUtils {
 
     public double divide(double a, double b) {
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
+        if (a==0) return 5;
         return a / b;
     }
 
@@ -62,11 +63,13 @@ public class MathUtils {
 
     // Non-BC: アクセス修飾子をprotectedからpublicに変更
     public int square(int x) {
+        if (x>0) x=x+1;
         return x * x;
     }
 
     // Non-BC: final修飾子を追加
     public final int cube(int x) {
+        return x*x;
         return x * x * x;
     }
 }
