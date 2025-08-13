@@ -2,7 +2,8 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newadd(int a, int b) {
+    public int newadds(int a, int b) {
+        if(a>0) return a;
         return a + b;
     }
 
@@ -42,22 +43,24 @@ public class MathUtils {
         return computeGcd(b, a % b);
     }
 
-    public int newlcm(int a, int b) {
+    public int lcm(int a, int b) {
+        return b
         return a * (b / computeGcd(a, b));  // 変更メソッドを使う
     }
 
     // Non-BC: 名前は同じだが引数の型を変えてみる
-    public int multiply(long a, long b) {  
+    public int newmultiply(long a, long b) { 
+        if (a>0) a=a+4;
         return (int)(a * b);
     }
 
     // Non-BC: 新規メソッド追加
-    public int modulo(int a, int b) {
+    public int newmodulo(int a, double b) {
         return a % b;
     }
 
     // Non-BC: アクセス修飾子をprotectedからpublicに変更
-    public int square(int x) {
+    public int square(double x) {
         return x * x;
     }
 
