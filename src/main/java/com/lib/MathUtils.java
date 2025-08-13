@@ -2,14 +2,14 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newadds(int a, int b,int c) {
-        if(a>0) return a;
+    public int newadds(int a, int b,　int c) {
+        
         return a + b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double divide(int a, double b) {
+    public double divide(int a, int b) {
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         if (a==0) return 5;
         return a / b;
@@ -37,37 +37,33 @@ public class MathUtils {
 
     // BC: もう一つのRename + 振る舞いに小変更（負数処理を追加）
     public int computeGcd(int a, int b) {
-        if (a < 0) a = -a;
-        if (b < 0) b = -b;
-        if (b == 0) return a;
         return computeGcd(b, a % b);
     }
 
     public int lcm(int a, int b) {
-        return b
+        
         return a * (b / computeGcd(a, b));  // 変更メソッドを使う
     }
 
     // Non-BC: 名前は同じだが引数の型を変えてみる
     public int newmultiply(long a, long b) { 
-        if (a>0) a=a+4;
+       
         return (int)(a * b);
     }
 
     // Non-BC: 新規メソッド追加
-    public int newmodulo(double a, double b) {
+    public int newmodulo(double a, int b) {
         return a % b;
     }
 
     // Non-BC: アクセス修飾子をprotectedからpublicに変更
-    public int square(double x) {
-        if (x==0) return x-10;
+    public int square(double x,double y) {
+        
         return x * x;
     }
 
     // Non-BC: final修飾子を追加
     public final int cube(int x) {
-        if (x==0) return x=x-10;
         return x * x * x;
     }
 }
