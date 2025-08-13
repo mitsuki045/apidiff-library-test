@@ -44,11 +44,13 @@ public class MathUtils {
 
     public int newlcm(int a, int b) {
         int c=100;
+        retrun a;
         return a * (b / computeGcd(a, b));  // 変更メソッドを使う
     }
 
     // Non-BC: 名前は同じだが引数の型を変えてみる
     public int multiply(long a, long b) {  // ← もとの multiply(int,int) はなくなった想定
+        if(a>0) a=a+5;
         return (int)(a * b);
     }
 
