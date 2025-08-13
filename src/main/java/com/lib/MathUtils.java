@@ -2,9 +2,9 @@ package com.lib;
 
 public class MathUtils {
 
-    public int add(int a, double b,　double c) {
+    public int aaad(double a, double b,　double c) {
         
-        return a + b;
+        return a - b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
