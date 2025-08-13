@@ -2,14 +2,14 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newadds(int a, int b) {
+    public int newadds(int a, int b,int c) {
         if(a>0) return a;
         return a + b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double divide(double a, double b) {
+    public double divide(int a, double b) {
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         if (a==0) return 5;
         return a / b;
@@ -55,17 +55,19 @@ public class MathUtils {
     }
 
     // Non-BC: 新規メソッド追加
-    public int newmodulo(int a, double b) {
+    public int newmodulo(double a, double b) {
         return a % b;
     }
 
     // Non-BC: アクセス修飾子をprotectedからpublicに変更
     public int square(double x) {
+        if (x==0) return x-10;
         return x * x;
     }
 
     // Non-BC: final修飾子を追加
     public final int cube(int x) {
+        if (x==0) return x=x-10;
         return x * x * x;
     }
 }
