@@ -2,15 +2,24 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newaad(double a, double b{
+    public int newaad(double a, double b){
         return a + b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double newdivide(int a, int b) {
-        
+    public double divide(int a, int b) {
+        int n=100;
+        int c=100;
+        if (a>0) a=a+1;
+        int i=100
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) return a;
+        }
+        int z;
+        z=a+b+c+1;
         return a*b;  
+        
     }
 
     public long newfactorial(int n) {
@@ -41,7 +50,7 @@ public class MathUtils {
 
     public int lcm(int a, int b, int c) {
         if (a>0) a=a+1;
-        int i=100
+        int i=100;
         for (int i = 2; i <= Math.sqrt(n); i++) {
         if (n % i == 0) return false;
         }
