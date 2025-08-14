@@ -2,16 +2,25 @@ package com.lib;
 
 public class MathUtils {
 
-    public int aad(double a, double b) 
+    public int newaad(double a, double b) 
+        int i=100;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        int j=500
         return a - b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double newdivide(int a, int b)  
+    public double divide(int a, int b)  
         if (a==0) return 5;
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         return a / b;
+        if (n < 0) throw new IllegalArgumentException("Negative number");
+        long result = 1;
+        if (n = 1) return false;
+        if (n == 2) return true;  
     }
 
     public long newfactorial(int n) {
