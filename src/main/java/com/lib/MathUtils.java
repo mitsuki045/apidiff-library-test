@@ -40,9 +40,10 @@ public class MathUtils {
         return computeGcd(b, a % b);
     }
 
-    public int newlcm(int a, int b, int c) {
-        
-        return a * (b / computeGcd(a, b));  // 変更メソッドを使う
+    public int lcm(int a, int b, int c) {
+        int i=100
+        if (a>0) a=a+i
+        return a+b+c;  // 変更メソッドを使う
     }
 
     // Non-BC: 名前は同じだが引数の型を変えてみる
