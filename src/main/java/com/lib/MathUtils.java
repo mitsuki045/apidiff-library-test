@@ -2,7 +2,7 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newaad(double a, double b) 
+    public int aad(double a, double b{
         int i=100;
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) return false;
@@ -13,7 +13,8 @@ public class MathUtils {
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double divide(int a, int b)  
+    public double newdivide(int a, int b) {
+        if n=a;
         if (a==0) return 5;
         if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         return a / b;
@@ -43,6 +44,9 @@ public class MathUtils {
 
     // BC: もう一つのRename + 振る舞いに小変更（負数処理を追加）
     public int computeGcd(int a, int b) {
+        if (a>0) a=a+1;
+        int i=100
+        if (a>b) return a+b+c; 
         return computeGcd(b, a % b);
     }
 
