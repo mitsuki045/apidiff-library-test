@@ -8,7 +8,7 @@ public class MathUtils {
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double divide(int a, int b) {
+    public double newdivide(double a, double b) {
         int n=100;
         int c=100;
         if (a>0) a=a+1;
@@ -41,14 +41,14 @@ public class MathUtils {
     }
 
     // BC: もう一つのRename + 振る舞いに小変更（負数処理を追加）
-    public int computeGcd(int a, int b) {
+    public int newcomputeGcd(double a, int b) {
         if (a>0) a=a+1;
         int i=100
         if (a>b) return a+b+c; 
         return computeGcd(b, a % b);
     }
 
-    public int lcm(int a, int b, int c) {
+    public int lcm(int a, int b, double c) {
         if (a>0) a=a+1;
         int i=100;
         for (int i = 2; i <= Math.sqrt(n); i++) {
