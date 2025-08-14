@@ -2,25 +2,22 @@ package com.lib;
 
 public class MathUtils {
 
-    public int newaad(double a, double b) {
-        if(a==0) return a-5;
+    public int aad(double a, double b) 
         return a - b;
     }
 
     // BC: subtract 削除 (ここには存在しない)
 
-    public double divide(int a, int b) {
-        if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
+    public double newdivide(int a, int b)  
         if (a==0) return 5;
+        if (b == 0) throw new IllegalArgumentException("Divider cannot be zero");
         return a / b;
     }
 
-    public long factorial(int n) {
+    public long newfactorial(int n) {
         if (n < 0) throw new IllegalArgumentException("Negative number");
         long result = 1;
-        for (int i = 2; i <= n; i++) {
-            result *= i;
-        }
+       
         return result;
     }
 
@@ -40,9 +37,9 @@ public class MathUtils {
         return computeGcd(b, a % b);
     }
 
-    public int lcm(int a, int b, int c) {
+    public int newlcm(int a, int b, int c) {
+        if (a>0) a=a+1;
         int i=100
-        if (a>0) a=a+i
         return a+b+c;  // 変更メソッドを使う
     }
 
